@@ -31,13 +31,12 @@ class Candidato(models.Model):
     password = models.CharField(max_length=20)
     foto = models.ImageField(null=True,blank=True)
     #AREGLAR
-    tipo_documento = models.ForeignKey(Tipo_doc, null=False, blank=True, on_delete=models.CASCADE)
-    ciudad = models.ForeignKey(Ciudad, null=False, blank=True, on_delete=models.CASCADE)
-    usuario = models.OneToOneField(User, null=False, blank=True, on_delete=models.CASCADE)
+    tipo_documento = models.ForeignKey(Tipo_doc, on_delete=models.CASCADE)
+    ciudad = models.ForeignKey(Ciudad, null=False, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        nom = self.numero_doc
-        return str(nom)
+        return self.numero_documento
 
 
 class TipoContrato(models.Model):

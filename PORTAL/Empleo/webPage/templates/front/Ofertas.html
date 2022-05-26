@@ -29,13 +29,13 @@
       {% if user.is_authenticated %}
       <td>
 
-        <a name="editar" id="editar" class="btn btn-info" href="{% url 'home' %}" role="button"> Aplicar</a>
+        <a name="editar" id="editar" class="btn btn-info" href="{% url 'webPage:home' %}" role="button"> Aplicar</a>
 
       </td>
       {% else %}
             <td>
 
-        <a name="editar2" id="editar2" class="btn btn-info" href="{% url 'login' %}" role="button"> Aplicar</a>
+        <a name="editar2" id="editar2" class="btn btn-info" href="{% url 'webPage:login' %}" role="button"> Aplicar</a>
 
       </td>
       {% endif %}

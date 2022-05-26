@@ -13,7 +13,13 @@ from django.contrib import messages
 # Create your views here.
 @login_required
 def data(request):
-    return render(request, 'front/detalles.html')
+
+    usuario = request.user
+
+    if request.method == "POST":
+        pass
+
+    return render(request, 'front/detalles.html', {'usuario': usuario})
 
 
 def singup(request):

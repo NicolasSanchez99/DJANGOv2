@@ -18,7 +18,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">JOB HEAVEN</a>
+      <a class="navbar-brand" href="{% url 'webPage:home' %}">JOB HEAVEN</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,12 +26,12 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'ofertas' %}">OFERTAS</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'webPage:ofertas' %}">OFERTAS</a>
           </li>
         </ul>
         {% if user.is_authenticated %}
         <span class="navbar-text">
-          <a href="{% url 'details' %}">{{user.username}} </a>
+          <a href="{% url 'webPage:details' %}">{{user.username}} </a>
           <a href="{% url 'logout' %}"> Cerrar sesion</a>
         </span>
         {% else %}
