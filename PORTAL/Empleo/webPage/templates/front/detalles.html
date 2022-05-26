@@ -1,0 +1,61 @@
+{% extends "chasis.html" %}
+
+{% block titulo %} Your Data {% endblock %}
+
+{% block contenido %}
+
+<div class="input-group mb-3">
+  <input type="number" class="form-control" placeholder="Numero de documento" aria-label="Username"
+    aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Primer nombre" aria-label="Username"
+    aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Otros nombres" aria-label="Username"
+    aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Primer apellido" aria-label="Username"
+    aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Otros apellidos" aria-label="Username"
+    aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="email" class="form-control" placeholder="Email" aria-label="Recipient's username"
+    aria-describedby="basic-addon2">
+  <span class="input-group-text" id="basic-addon2">@example.com</span>
+</div>
+
+<div class="input-group mb-3">
+  <input type="password" class="form-control" placeholder="Password" aria-label="Recipient's username"
+    aria-describedby="basic-addon2">
+</div>
+
+<div class="input-group mb-3">
+  <input type="number" class="form-control" placeholder="Telefono" aria-label="Username"
+    aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+  <span class="input-group-text">Perfil</span>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
+
+<div class="input-group">
+  <img
+  src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+  class="img-thumbnail"
+  alt="Hollywood Sign on The Hill"
+/>
+</div>
+
+{% endblock %}

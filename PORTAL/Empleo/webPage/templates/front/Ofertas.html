@@ -1,0 +1,54 @@
+{% extends "chasis.html" %}
+
+{% block titulo %} Your Data {% endblock %}
+
+{% block contenido %}
+
+
+<!-- Jumbotron -->
+<!-- Background image -->
+<div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Vacantes</th>
+      <th scope="col">Salario</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Tipo contrato</th>
+      <th scope="col">Ciudad</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for oferta in ofertas %}
+    <tr>
+      <td>{{ oferta.vacante }}</td>
+      <td>{{ oferta.salario }}</td>
+      <td>{{ oferta.descripcion }}</td>
+      <td>{{ oferta.tipo_contrato }}</td>
+      <td>{{ oferta.ciudad }}</td>
+      {% if user.is_authenticated %}
+      <td>
+
+        <a name="editar" id="editar" class="btn btn-info" href="{% url 'home' %}" role="button"> Aplicar</a>
+
+      </td>
+      {% else %}
+            <td>
+
+        <a name="editar2" id="editar2" class="btn btn-info" href="{% url 'login' %}" role="button"> Aplicar</a>
+
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+<!-- Background image -->
+
+{% endblock %}

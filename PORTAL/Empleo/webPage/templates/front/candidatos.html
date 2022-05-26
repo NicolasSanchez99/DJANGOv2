@@ -1,0 +1,40 @@
+{% extends "chasis.html" %}
+
+{% block titulo %} Your Data {% endblock %}
+
+{% block contenido %}
+
+
+<!-- Jumbotron -->
+<!-- Background image -->
+<div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Numero documento</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for candidato in candidatos %}
+    <tr>
+      <td>{{candidato.numero_doc}}</td>
+      <td>{{candidato.nombre1}}</td>
+      <td>{{candidato.apellido1}}</td>
+      <td>{{candidato.email}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+</div>
+
+
+
+
+
+<!-- Background image -->
+
+{% endblock %}
